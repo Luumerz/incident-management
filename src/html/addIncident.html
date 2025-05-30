@@ -29,7 +29,7 @@
     </style>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 p-font-size">
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm sticky-top p-3">
@@ -42,7 +42,7 @@
                 <ul class="navbar-nav text-center">
                     <li class="nav-item">
                         <a class="nav-link" href="profile.html"><svg xmlns="http://www.w3.org/2000/svg" width="40"
-                                height="40" fill="currentColor" class="bi bi-person-circle text-dark"
+                                height="40" fill="currentColor" class="bi bi-person-circle text-black-rich"
                                 viewBox="0 0 16 16">
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
                                 <path fill-rule="evenodd"
@@ -59,33 +59,56 @@
     <div class="bg-image-incidents container-fluid py-5 flex-grow-1">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-6">
-                <h1 class="text-center text-white mb-4">Añadir Incidente</h1>
+                <h1 class="text-center text-black-rich mb-4 font-family-noto-serif bg-blue-lapislazuli rounded p-2 h1-font-size">Añadir Incidencia</h1>
                 <form id="addIncidentForm" novalidate class="bg-white p-4 rounded shadow-sm  needs-validation" method="POST">
                     <div class="mb-3">
-                        <label for="incidentTitle" class="form-label">Título del Incidente</label>
-                        <input type="text" class="form-control" required id="incidentTitle" required>
+                        <label for="incidentTitle" class="form-label text-black-rich font-family-raleway">Título del Incidente</label>
+                        <input type="text" class="form-control font-family-raleway" required id="incidentTitle" required>
                     </div>
                     <div class="mb-3">
-                        <label for="incidentDescription" class="form-label">Descripción</label>
-                        <textarea class="form-control" required id="incidentDescription" rows="4" required></textarea>
+                        <label for="incidentDescription" class="form-label text-black-rich font-family-raleway">Descripción</label>
+                        <textarea class="form-control text-black-rich font-family-raleway" required id="incidentDescription" rows="4" required></textarea>
                     </div>
                     <div class="mb-3">
-                        <label for="incidentDate" class="form-label">Fecha del Incidente</label>
-                        <input type="date" class="form-control" required id="incidentDate" required>
+                        <label for="incidentDate" class="form-label text-black-rich font-family-raleway">Fecha del Incidente</label>
+                        <input type="date" class="form-control text-black-rich font-family-raleway" required id="incidentDate" required>
                     </div>
-                    <select class="form-select mb-3" required aria-label="Status">
-                        <option selected disabled value="">Estado</option>
-                        <option value="1" class="bg-danger">Urgente</option>
-                        <option value="2" class="bg-success">Solucionada</option>
-                        <option value="3" class="bg-warning">Pendiente</option>
+                    <select class="form-select mb-3 text-black-rich" required aria-label="Status">
+                        <option selected disabled value="" class="text-black-rich font-family-raleway">Estado</option>
+                        <option value="1" class="text-black-rich bg-danger font-family-raleway">Urgente</option>
+                        <option value="2" class="text-black-rich bg-success font-family-raleway">Solucionada</option>
+                        <option value="3" class="text-black-rich bg-warning font-family-raleway">Pendiente</option>
                     </select>
-                    <a href="incidents.html" class="btn btn-danger"><- Volver a incidencias</a>
-                            <button type="submit" class="btn btn-primary float-end">Añadir Incidente</button>
+                    <a href="incidents.html" class="btn btn-outline-blue-prussian font-family-raleway"><- Volver a incidencias</a>
+                            <button type="submit" class="btn btn-blue-steel float-end font-family-raleway">Añadir Incidente</button>
                 </form>
             </div>
         </div>
         <script src="../js/bootstrap.bundle.min.js"></script>
-        <script src="../js/form-validation.js"></script>
+        <script>
+        (() => {
+            "use strict";
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll(".needs-validation");
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach((form) => {
+                form.addEventListener(
+                    "submit",
+                    (event) => {
+                        if (!form.checkValidity()) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+
+                        form.classList.add("was-validated");
+                    },
+                    false
+                );
+            });
+        })();
+    </script>
 </body>
 
 </html>

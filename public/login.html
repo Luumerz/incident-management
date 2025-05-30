@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../src/css/main.css">
+    <link rel="stylesheet" href="../src/css/main.css" />
     <style>
         .login-background-image {
             background-image: url(../src/assets/img/login_background.png);
@@ -14,30 +14,39 @@
             height: 100%;
         }
     </style>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </head>
 
-<body class="container-fluid vh-100">
+<body class="container-fluid vh-100 p-font-size">
     <div class="row h-100">
         <!-- Imagen de fondo -->
         <div class="col-12 d-lg-none login-background-image position-absolute top-0 start-0 w-100 h-100"></div>
 
         <!-- Formulario -->
         <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center order-lg-2 z-1 rounded-5">
-            <div class="bg-light p-5 rounded-5 shadow w-100" style="max-width: 400px;">
+            <div class="bg-white p-5 rounded-5 shadow w-100" style="max-width: 400px">
                 <form class="row g-4 needs-validation" novalidate action="../src/html/incidents.html" method="POST">
                     <!-- Email -->
                     <div class="col-12">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control bg-info text-black" required id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                        <label for="exampleInputEmail1" class="form-label font-family-raleway">Email address</label>
+                        <input type="email" class="form-control bg-blue-steel text-black-rich font-family-raleway"
+                            required id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" />
+                        <div class="invalid-feedback font-family-raleway">
+                            Por favor ingresa un correo válido.
+                        </div>
                     </div>
                     <!-- Password -->
                     <div class="col-12">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control bg-info text-black" required id="exampleInputPassword1" placeholder="Password">
+                        <label for="exampleInputPassword1" class="form-label font-family-raleway">Password</label>
+                        <input type="password" class="form-control bg-blue-steel text-black-rich font-family-raleway" required
+                            id="exampleInputPassword1" placeholder="Password" />
+                        <div class="invalid-feedback font-family-raleway">La contraseña es obligatoria.</div>
                     </div>
                     <!-- Submit Button -->
                     <div class="col-12">
-                        <button type="submit" class="btn btn-info w-100 text-black">Submit</button>
+                        <button type="submit" class="btn btn-blue-steel w-100 text-black-rich font-family-raleway">
+                            Log in
+                        </button>
                     </div>
                 </form>
             </div>
@@ -46,9 +55,30 @@
         <!-- Imagen de fondo en pantallas grandes -->
         <div class="col-12 col-lg-8 login-background-image d-none d-lg-block order-1"></div>
     </div>
+    <script>
+        (() => {
+            "use strict";
 
-    <script src="../src/js/bootstrap.bundle.min.js"></script>
-    <script src="../src/js/form-validation.js"></script>
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll(".needs-validation");
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach((form) => {
+                form.addEventListener(
+                    "submit",
+                    (event) => {
+                        if (!form.checkValidity()) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+
+                        form.classList.add("was-validated");
+                    },
+                    false
+                );
+            });
+        })();
+    </script>
 </body>
 
 </html>

@@ -2,10 +2,10 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Incidentes</title>
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/main.css" />
     <style>
         .logo-img {
             height: 100px;
@@ -29,21 +29,21 @@
     </style>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 p-font-size">
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm sticky-top p-3">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="../../public/login.html">
-                <img src="../assets/img/Logo_incidendias_iesruizgijon.png" alt="Logo" class="logo-img me-2">
+                <img src="../assets/img/Logo_incidendias_iesruizgijon.png" alt="Logo" class="logo-img me-2" />
             </a>
 
             <div class="justify-content-end" id="menuNav">
                 <ul class="navbar-nav text-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="profile.html"><svg xmlns="http://www.w3.org/2000/svg" width="40"
-                                height="40" fill="currentColor" class="bi bi-person-circle text-dark"
-                                viewBox="0 0 16 16">
+                        <a class="nav-link" href="profile.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                                class="bi bi-person-circle text-black-rich" viewBox="0 0 16 16">
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
                                 <path fill-rule="evenodd"
                                     d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
@@ -59,10 +59,9 @@
     <div class="bg-image-incidents container-fluid py-5 flex-grow-1">
         <div class="row justify-content-center">
             <div class="col-12 col-md-10 col-lg-8">
-
                 <div class="card shadow-sm">
-                    <div class="card-header bg-primary text-white text-center">
-                        <h5 class="mb-0">Listado de Incidencias</h5>
+                    <div class="card-header bg-blue-steel text-white text-center">
+                        <h4 class="mb-0 text-black-rich font-family-noto-serif h4-font-size">Listado de Incidencias</h4>
                     </div>
 
                     <div class="card-body p-0">
@@ -71,78 +70,78 @@
                             <table class="table table-hover table-bordered mb-0 text-center">
                                 <thead class="table-light">
                                     <tr>
-                                        <th>#</th>
-                                        <th>Nombre</th>
-                                        <th>Descripción</th>
-                                        <th>Fecha</th>
-                                        <th colspan="2"><a class="btn btn-danger" href="addIncident.html">Añadir
+                                        <th class="text-black-rich font-family-raleway">#</th>
+                                        <th class="text-black-rich font-family-raleway">Nombre</th>
+                                        <th class="text-black-rich font-family-raleway">Descripción</th>
+                                        <th class="text-black-rich font-family-raleway">Fecha</th>
+                                        <th colspan="2"><a class="btn btn-outline-blue-prussian font-family-raleway" href="addIncident.html">Añadir
                                                 incidencia</a></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>1</td>
-                                        <td>Incidente 1</td>
-                                        <td>Descripción del incidente 1</td>
-                                        <td>2025-04-29</td>
-                                        <td><span class="badge bg-warning">Pendiente</span></td>
-                                        <td><button class="btn btn-success">Solucionar</button></td>
+                                        <td class="text-black-rich font-family-raleway">1</td>
+                                        <td class="text-black-rich font-family-raleway">Incidente 1</td>
+                                        <td class="text-black-rich font-family-raleway">Descripción del incidente 1</td>
+                                        <td class="text-black-rich font-family-raleway">2025-04-29</td>
+                                        <td><span class="badge bg-warning font-family-raleway"><i class="bi bi-wrench"></i> Pendiente</span></td>
+                                        <td><button class="btn btn-outline-blue-picton font-family-raleway">Solucionar</button></td>
                                     </tr>
                                     <tr>
-                                        <td>2</td>
-                                        <td>Incidente 2</td>
-                                        <td>Descripción del incidente 2</td>
-                                        <td>2025-04-29</td>
-                                        <td><span class="badge bg-success">Solucionada</span></td>
-                                        <td>Profesor A</td>
+                                        <td class="text-black-rich font-family-raleway">2</td>
+                                        <td class="text-black-rich font-family-raleway">Incidente 2</td>
+                                        <td class="text-black-rich font-family-raleway">Descripción del incidente 2</td>
+                                        <td class="text-black-rich font-family-raleway">2025-04-29</td>
+                                        <td><span class="badge bg-success font-family-raleway"><i class="bi bi-check-circle-fill"></i> Solucionada</span></td>
+                                        <td class="text-black-rich font-family-raleway">Profesor A</td>
                                     </tr>
                                     <tr>
-                                        <td>3</td>
-                                        <td>Incidente 3</td>
-                                        <td>Descripción del incidente 3</td>
-                                        <td>2025-04-29</td>
-                                        <td><span class="badge bg-warning">Pendiente</span></td>
-                                        <td><button class="btn btn-success">Solucionar</button></td>
+                                        <td class="text-black-rich font-family-raleway">3</td>
+                                        <td class="text-black-rich font-family-raleway">Incidente 3</td>
+                                        <td class="text-black-rich font-family-raleway">Descripción del incidente 3</td>
+                                        <td class="text-black-rich font-family-raleway">2025-04-29</td>
+                                        <td><span class="badge bg-warning font-family-raleway"><i class="bi bi-wrench"></i> Pendiente</span></td>
+                                        <td><button class="btn btn-outline-blue-picton font-family-raleway">Solucionar</button></td>
                                     </tr>
                                     <tr>
-                                        <td>4</td>
-                                        <td>Incidente 4</td>
-                                        <td>Descripción del incidente 4</td>
-                                        <td>2025-04-29</td>
-                                        <td><span class="badge bg-danger">Urgente</span></td>
-                                        <td><button class="btn btn-success">Solucionar</button></td>
+                                        <td class="text-black-rich font-family-raleway">4</td>
+                                        <td class="text-black-rich font-family-raleway">Incidente 4</td>
+                                        <td class="text-black-rich font-family-raleway">Descripción del incidente 4</td>
+                                        <td class="text-black-rich font-family-raleway">2025-04-29</td>
+                                        <td><span class="badge bg-danger font-family-raleway"><i class="bi bi-exclamation-triangle-fill"></i> Urgente</span></td>
+                                        <td><button class="btn btn-outline-blue-picton font-family-raleway">Solucionar</button></td>
                                     </tr>
                                     <tr>
-                                        <td>5</td>
-                                        <td>Incidente 5</td>
-                                        <td>Descripción del incidente 5</td>
-                                        <td>2025-04-29</td>
-                                        <td><span class="badge bg-success">Solucionada</span></td>
-                                        <td>Profesor B</td>
+                                        <td class="text-black-rich font-family-raleway">5</td>
+                                        <td class="text-black-rich font-family-raleway">Incidente 5</td>
+                                        <td class="text-black-rich font-family-raleway">Descripción del incidente 5</td>
+                                        <td class="text-black-rich font-family-raleway">2025-04-29</td>
+                                        <td><span class="badge bg-success font-family-raleway"><i class="bi bi-check-circle-fill"></i> Solucionada</span></td>
+                                        <td class="text-black-rich font-family-raleway">Profesor B</td>
                                     </tr>
                                     <tr>
-                                        <td>6</td>
-                                        <td>Incidente 6</td>
-                                        <td>Descripción del incidente 6</td>
-                                        <td>2025-04-29</td>
-                                        <td><span class="badge bg-warning">Pendiente</span></td>
-                                        <td><button class="btn btn-success">Solucionar</button></td>
+                                        <td class="text-black-rich font-family-raleway">6</td>
+                                        <td class="text-black-rich font-family-raleway">Incidente 6</td>
+                                        <td class="text-black-rich font-family-raleway">Descripción del incidente 6</td>
+                                        <td class="text-black-rich font-family-raleway">2025-04-29</td>
+                                        <td><span class="badge bg-warning font-family-raleway"><i class="bi bi-wrench"></i> Pendiente</span></td>
+                                        <td><button class="btn btn-outline-blue-picton font-family-raleway">Solucionar</button></td>
                                     </tr>
                                     <tr>
-                                        <td>7</td>
-                                        <td>Incidente 7</td>
-                                        <td>Descripción del incidente 7</td>
-                                        <td>2025-04-29</td>
-                                        <td><span class="badge bg-danger">Urgente</span></td>
-                                        <td><button class="btn btn-success">Solucionar</button></td>
+                                        <td class="text-black-rich font-family-raleway">7</td>
+                                        <td class="text-black-rich font-family-raleway">Incidente 7</td>
+                                        <td class="text-black-rich font-family-raleway">Descripción del incidente 7</td>
+                                        <td class="text-black-rich font-family-raleway">2025-04-29</td>
+                                        <td><span class="badge bg-danger font-family-raleway"><i class="bi bi-exclamation-triangle-fill"></i> Urgente</span></td>
+                                        <td><button class="btn btn-outline-blue-picton font-family-raleway">Solucionar</button></td>
                                     </tr>
                                     <tr>
-                                        <td>8</td>
-                                        <td>Incidente 8</td>
-                                        <td>Descripción del incidente 8</td>
-                                        <td>2025-04-29</td>
-                                        <td><span class="badge bg-warning">Pendiente</span></td>
-                                        <td><button class="btn btn-success">Solucionar</button></td>
+                                        <td class="text-black-rich font-family-raleway">8</td>
+                                        <td class="text-black-rich font-family-raleway">Incidente 8</td>
+                                        <td class="text-black-rich font-family-raleway">Descripción del incidente 8</td>
+                                        <td class="text-black-rich font-family-raleway">2025-04-29</td>
+                                        <td><span class="badge bg-warning font-family-raleway"><i class="bi bi-wrench"></i> Pendiente</span></td>
+                                        <td><button class="btn btn-outline-blue-picton font-family-raleway">Solucionar</button></td>
                                     </tr>
                                 </tbody>
                             </table>
