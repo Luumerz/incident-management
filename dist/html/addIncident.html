@@ -60,7 +60,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-6">
                 <h1 class="text-center text-black-rich mb-4 font-family-noto-serif bg-blue-lapislazuli rounded p-2 h1-font-size">Añadir Incidencia</h1>
-                <form id="addIncidentForm" novalidate class="bg-white p-4 rounded shadow-sm  needs-validation" method="POST">
+                <form id="addIncidentForm" novalidate class="bg-white p-4 rounded shadow-sm  needs-validation">
                     <div class="mb-3">
                         <label for="incidentTitle" class="form-label text-black-rich font-family-raleway">Título del Incidente</label>
                         <input type="text" class="form-control font-family-raleway" required id="incidentTitle" required>
@@ -80,12 +80,12 @@
                         <option value="3" class="text-black-rich bg-warning font-family-raleway">Pendiente</option>
                     </select>
                     <a href="incidents.html" class="btn btn-outline-blue-prussian font-family-raleway"><- Volver a incidencias</a>
-                            <button type="submit" class="btn btn-blue-steel float-end font-family-raleway">Añadir Incidente</button>
+                            <button class="btn btn-blue-steel float-end font-family-raleway">Añadir Incidente</button>
                 </form>
             </div>
         </div>
         <script src="../js/bootstrap.bundle.min.js"></script>
-        <script src="js/validation.js"></script>
+        <script src="../js/validation.js"></script>
 </body>
 
 </html>
