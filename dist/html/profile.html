@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Incidentes</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <style>
+        .logo-img {
+            height: 100px;
+            max-height: 100px;
+            object-fit: contain;
+        }
+
+        .bg-image-incidents {
+            background-image: url(../assets/img/incidents_background.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        body {
+            min-height: 100vh;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100 p-font-size">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm sticky-top p-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="../../public/login.html">
+                <img src="../assets/img/Logo_incidendias_iesruizgijon.png" alt="Logo" class="logo-img me-2">
+            </a>
+
+            <div class=" justify-content-end" id="menuNav">
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item">
+                        <a href="incidents.html" class="btn btn-outline-blue-prussian font-family-raleway"><-Volver a incidencias</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido -->
+
+    <div class="bg-image-incidents container-fluid py-5 flex-grow-1">
+        <div class="row justify-content-center">
+            <!-- Contenedor principal -->
+            <div class="col-md-8 col-lg-6 d-lg-flex">
+                <!-- Tarjeta de información del usuario -->
+                <div class="card shadow-sm flex-grow-1">
+                    <div class="card-body p-4 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor"
+                            class="bi bi-person-circle text-black-rich m-3" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                            <path fill-rule="evenodd"
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                        </svg>
+                        <h4 class="card-title m-3 text-blue-prussian font-family-noto-serif h4-font-size">Información del Usuario</h4>
+                        <p class="card-text text-black-rich m-3 font-family-raleway"><span class="text-blue-prussian font-family-raleway">Nombre:</span> Juan Pérez</p>
+                        <p class="card-text text-black-rich m-3 font-family-raleway"><span class="text-blue-prussian font-family-raleway">Email:</span> juanperez@gmail.com</p>
+                        <p class="card-text text-black-rich m-3 font-family-raleway"><span class="text-blue-prussian font-family-raleway">Teléfono:</span> 123456789</p>
+                        <a href="#" class="btn btn-blue-steel m-3">Editar Perfil</a>
+                        <a href="../index.html" class="btn btn-outline-blue-lapislazuli m-3">Cerrar sesion</a>
+                    </div>
+                </div>
+                <!-- Descripción -->
+                <div class="bg-blue-picton text-black-rich p-4 rounded mx-auto my-auto font-family-raleway" style="width: fit-content;">
+                    Estadísticas de Incidencias: <br>
+                    - Abiertas: 5 <br>
+                    - Cerradas: 2 <br>
+                    - En progreso: 1
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
